@@ -9,7 +9,7 @@ import down from '../public/svgs/down.svg'
 
 const Header = () => {
   return (
-    <div className='w-full fixed left-0 top-0'>
+    <div className='w-full fixed z-[999] left-0 top-0'>
       <div className='flex justify-between px-[80px] py-[20px] bg-[#fff]'>
         <div className='flex items-center gap-[20px]'>
             <Link href='/' className='flex items-center gap-[10px]'>
