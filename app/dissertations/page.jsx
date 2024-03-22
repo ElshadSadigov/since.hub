@@ -3,8 +3,10 @@ import backIcon from '../../public/svgs/back-icon.svg'
 import nextIcon from '../../public/svgs/next-icon.svg'
 import Image from 'next/image'
 import Link from 'next/link'
+import ProfileCard from '@/components/profile-card'
 
 const page = () => {
+    const data = [1, 2, 3, 4, 5, 6, 7, 8, 9]
   return (
     <div>
        <div className='flex items-center justify-between px-[80px] py-[23px] border-b-[1px] border-[#d9d9d9]'>
@@ -19,6 +21,13 @@ const page = () => {
           <Image src={backIcon} />
           <span className='text-[16px] font-medium text-[#050123]'>Geri</span>
         </Link>
+      </div>
+      <div className='mt-[80px] mb-[120px] px-[80px] grid grid-cols-3 gap-x-[32px] gap-y-[48px]'>
+        {
+            data.map(item=>{
+                return <ProfileCard key={item}/>
+            })
+        }
       </div>
     </div>
   )
