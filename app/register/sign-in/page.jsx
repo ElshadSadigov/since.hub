@@ -27,7 +27,7 @@ const page = () => {
                     <input type="checkbox" id="remember" className='w-[16px] h-[16px] cursor-pointer'/>
                     <label htmlFor="remember" className='text-[12px] text-[#050123] text-opacity-75 cursor-pointer'>Məni xatırla</label>
                 </div>
-                <Link href='/' className='text-[12px] text-[#374af3]'>Şifrəni unutmusunuz?</Link>
+                <Link href='/register/forget-password' className='text-[12px] text-[#374af3]'>Şifrəni unutmusunuz?</Link>
             </div>
             <div className='w-full flex items-center gap-[40px] mt-[50px]'>
             <button className='w-1/2 rounded-[12px] bg-[#374af3] py-[16px] text-[16px] font-semibold text-[#fff]'>Qeydiyyat</button>
@@ -38,7 +38,7 @@ const page = () => {
             </div>
             <div className='w-full flex items-center justify-center gap-[5px] mt-[60px]'>
                 <span className='text-[16px] text-[#050123] '>Hesabınız yoxdur?</span>
-                <Link href='/' className='text-[16px] text-[#374af3]'>Qeydiyyatdan keçin</Link>
+                <Link href='/register' className='text-[16px] text-[#374af3]'>Qeydiyyatdan keçin</Link>
             </div>
         </div>
     )

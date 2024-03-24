@@ -39,7 +39,7 @@ const page = () => {
             </div>
             <div className='mt-[60px] w-full flex gap-[8px] items-center justify-center'>
                 <span className='text-[16px] text-[#050123]'>Artıq hesabınız var?</span>
-                <Link href='/' className='text-[16px] text-[#374af3]'>Daxil ol</Link>
+                <Link href='/register/sign-in' className='text-[16px] text-[#374af3]'>Daxil ol</Link>
             </div>
         </div>
     )

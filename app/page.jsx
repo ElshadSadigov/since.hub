@@ -1,3 +1,6 @@
+"use client"
+import React from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
 import AboutCard from "@/components/about-card";
 import aboutIcon1 from '../public/svgs/about-icon1.svg'
 import aboutIcon2 from '../public/svgs/about-icon2.svg'
@@ -7,38 +10,97 @@ import shareImg from '../public/imgs/share-img.png'
 import booksImg from '../public/imgs/books-img.png'
 import maqasImg from '../public/imgs/maqas-img.png'
 import bloqsImg from '../public/imgs/bloqs-img.png'
+import slide1 from '../public/imgs/slide-1.png'
+import slide2 from '../public/imgs/slide-2.png'
+import slide3 from '../public/imgs/slide-3.jpeg'
 import Image from "next/image";
 import Link from "next/link";
 import Card from "@/components/card";
+
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+import '../public/css/style.css'
+
+// import './styles.css';
+
+import { Pagination, Navigation } from 'swiper/modules';
 
 
 export default function Home() {
   const data = [1, 2, 3, 4, 5, 6, 7, 8]
   return (
     <div>
-      <div>
-        Slide part
+      <div className="flex items-center justify-between h-[450px] px-[80px] pt-[80px] mb-[120px] gap-[40px]">
+        <div className="w-2/3 h-full rounded-[16px] overflow-hidden">
+          <Swiper
+            slidesPerView={1}
+            spaceBetween={30}
+            loop={true}
+            pagination={{
+              clickable: true,
+            }}
+            navigation={true}
+            modules={[Pagination, Navigation]}
+            className="mySwiper h-full"
+          >
+            <SwiperSlide className='relative'>
+              <Image src={slide1} alt='slide img' className='w-full h-full'/>
+              <div className='absolute left-[16px] bottom-[40px]'>
+                <span className='text-[20px] font-semibold text-[#fff]'>Zeynep Kaya: Yeni Başlangıçlar</span>
+                <p className='text-[16px] text-[#fff] text-opacity-75'>İçsel Değişim ve Kişisel Gelişim Üzerine" adlı eseri, bireylerin hayatlarında yapmak istedikleri...</p>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide className='relative'>
+              <Image src={slide2} alt='slide img' className='w-full h-full '/>
+              <div className='absolute left-[16px] bottom-[40px]'>
+                <span className='text-[20px] font-semibold text-[#fff]'>Zeynep Kaya: Yeni Başlangıçlar</span>
+                <p className='text-[16px] text-[#fff] text-opacity-75'>İçsel Değişim ve Kişisel Gelişim Üzerine" adlı eseri, bireylerin hayatlarında yapmak istedikleri...</p>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide className='relative'>
+              <Image src={slide3} alt='slide img' className='w-full h-full '/>
+              <div className='absolute left-[16px] bottom-[40px]'>
+                <span className='text-[20px] font-semibold text-[#fff]'>Zeynep Kaya: Yeni Başlangıçlar</span>
+                <p className='text-[16px] text-[#fff] text-opacity-75'>İçsel Değişim ve Kişisel Gelişim Üzerine" adlı eseri, bireylerin hayatlarında yapmak istedikleri...</p>
+              </div>
+            </SwiperSlide>
+          </Swiper>
+        </div>
+        <div className="w-1/3 h-full flex flex-col justify-between ">
+          <div className='h-[45%] rounded-[8px] overflow-hidden relative'>
+            <Image src={slide2} alt='slide img' className='w-full h-[100%]'/>
+            <div className='absolute left-[16px] bottom-[18px]'>
+              <span className='text-[16px] font-semibold text-[#fff]'>Dini mətnlərdəki ortaq əfsanələr</span>
+              <p className='text-[14px] text-[#fff] text-opacity-75'>Dini mətnlərdə bir çox ortaq hekayələr görürük...</p>
+            </div>
+          </div>
+          <div className='h-[45%] rounded-[8px] overflow-hidden relative'>
+            <Image src={slide3} alt='slide img' className='w-full h-[100%]'/>
+            <div className='absolute left-[16px] bottom-[18px]'>
+              <span className='text-[16px] font-semibold text-[#fff]'>Dini mətnlərdəki ortaq əfsanələr</span>
+              <p className='text-[14px] text-[#fff] text-opacity-75'>Dini mətnlərdə bir çox ortaq hekayələr görürük...</p>
+            </div>
+          </div>
+        </div>
       </div>
       <div className="w-full flex items-center justify-between ps-[80px] bg-[#EEFAFA]">
         <div className="flex flex-col items-start">
           <span className="text-[36px] text-[#050123] font-medium">Haqqımızda</span>
           <span className="mt-[10px] text-[#050123] text-opacity-50 text-[20px]  font-medium">3 əsas mərhələdə haqqımızda daha çox məlumat əldə edin</span>
-          <div className="mt-[50px] flex gap-[32px] ">
+          <div className="mt-[50px] flex gap-[32px] bg- ">
             <AboutCard
               img={aboutIcon1}
-              color='orange-400'
               title='Dəyərlərimiz'
               text='İşimizi sadiqliklə, şəffaflıqla və etik normativlərlə üstün tuturuq. Müştərilərimiz və tərəfdaşlarımızla sağlam əlaqələr qurmağa önəlik veririk.'
             />
             <AboutCard
               img={aboutIcon2}
-              color='red-400'
               title=' Hədəflərimiz'
               text='Mükəmməl xidmət təklifi üçün planlı və yüksək standartlarda çalışmağı hədəfləyirik. Uzunmüddətli nailiyyət əldə etməyi hədəfləyirik.'
             />
             <AboutCard
               img={aboutIcon3}
-              color='green-400'
               title='Missiyamız'
               text='Müştərilərimizə uğur yolculuğunda tərəfdaşlıq və dəstək təmin etmək istəyirik. Layiqli xidmət missiyamızın əsasını təşkil edir.'
             />
@@ -93,19 +155,19 @@ export default function Home() {
             <div className="w-full h-full absolute left-0 top-0  bg-[#050123] bg-opacity-50 flex items-center justify-center">
               <span className="px-[56px] py-[15px] rounded-[8px] bg-[#fff] bg-opacity-25 text-[30px] font-medium text-[#fff]">Bloqlar</span>
             </div>
-            <Image src={bloqsImg} alt="bloq img" className=" w-full h-full"/>
+            <Image src={bloqsImg} alt="bloq img" className=" w-full h-full" />
           </div>
           <div className="relative h-[250px] rounded-[8px] overflow-hidden">
             <div className="w-full h-full absolute left-0 top-0  bg-[#050123] bg-opacity-50 flex items-center justify-center">
               <span className="px-[56px] py-[15px] rounded-[8px] bg-[#fff] bg-opacity-25 text-[30px] font-medium text-[#fff]">Məqalələr</span>
             </div>
-            <Image src={maqasImg} alt="bloq img" className=" w-full h-full"/>
+            <Image src={maqasImg} alt="bloq img" className=" w-full h-full" />
           </div>
           <div className="relative h-[250px] rounded-[8px] overflow-hidden">
             <div className="w-full h-full absolute left-0 top-0  bg-[#050123] bg-opacity-50 flex items-center justify-center">
               <span className="px-[56px] py-[15px] rounded-[8px] bg-[#fff] bg-opacity-25 text-[30px] font-medium text-[#fff]">Kitablar</span>
             </div>
-            <Image src={booksImg} alt="bloq img" className=" w-full h-full"/>
+            <Image src={booksImg} alt="bloq img" className=" w-full h-full" />
           </div>
         </div>
       </div>
@@ -117,7 +179,7 @@ export default function Home() {
           </div>
           <div className="mt-[16px] grid grid-cols-4 gap-x-[32px] gap-y-[48px]">
             {
-              data.map(item =>{
+              data.map(item => {
                 return <Card key={item} />
               })
             }
@@ -130,7 +192,7 @@ export default function Home() {
           </div>
           <div className="mt-[16px] grid grid-cols-4 gap-x-[32px] gap-y-[48px]">
             {
-              data.map(item =>{
+              data.map(item => {
                 return <Card key={item} />
               })
             }
@@ -143,7 +205,7 @@ export default function Home() {
           </div>
           <div className="mt-[16px] grid grid-cols-4 gap-x-[32px] gap-y-[48px]">
             {
-              data.map(item =>{
+              data.map(item => {
                 return <Card key={item} />
               })
             }
@@ -151,7 +213,7 @@ export default function Home() {
         </div>
       </div>
       <div className="px-[80px] py-[150px]">
-          s
+        s
       </div>
     </div>
   );

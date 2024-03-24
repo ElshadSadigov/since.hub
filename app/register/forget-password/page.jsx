@@ -21,7 +21,7 @@ const page = () => {
                 <div className='mt-[50px] flex flex-col items-center w-1/2 '>
                     <input type="text" placeholder='E-poçtunuz' className='outline-none px-[20px] py-[13px] rounded-[12px] border-[1px] border-[#374af3] border-opacity-20 bg-[#fff] w-full'/>
                     <button className='mt-[30px] w-full py-[16px] text-[16px] font-semibold text-[#fff] rounded-[12px] bg-[#374af3]'>Şifrəni sıfırla</button>
-                    <Link href='/' className='mt-[20px] text-[14px] text-[#050123]'>Geri qayıdın</Link>
+                    <Link href='/register' className='mt-[20px] text-[14px] text-[#050123]'>Geri qayıdın</Link>
                 </div>
             </div>
         </div>
