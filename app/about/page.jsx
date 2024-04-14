@@ -7,8 +7,9 @@ import Link from 'next/link'
 const page = () => {
   return (
     <div>
-      <div className='flex items-center justify-between px-[80px] py-[23px] border-b-[1px] border-[#d9d9d9]'>
-        <div className='flex items-center gap-[10px] '>
+      <div className='flex items-center justify-between px-[30px] md:px-[80px] py-[23px] border-b-[1px] border-[#d9d9d9]'>
+
+        <div className='flex items-center gap-[10px] mt-[10px] md:mt-[0px]'>
             <span className='text-[16px] text-[#050123] font-medium'>Ana səhifə</span>
             <Image src={nextIcon} alt='next icon'/>
             <span className='text-[16px] text-[#050123] font-medium'>Haqqımızda</span>
@@ -18,8 +19,8 @@ const page = () => {
             <span className='text-[16px] font-medium text-[#050123]'>Geri</span>
         </Link>
       </div>
-      <div className='mt-[80px] mb-[120px] px-[80px] flex flex-col items-center'>
-        <span className='text-[32px] font-semibold text-[#050123]'>Haqqımızda</span>
+      <div className='mt-[50px] md:mt-[80px] mb-[120px] px-[30px] md:px-[80px] flex flex-col items-center'>
+        <span className='text-[24px] md:text-[32px] font-semibold text-[#050123]'>Haqqımızda</span>
         <div className='mt-[50px] flex flex-col gap-[30px]'>
             <p className='text-[16px] text-[#050123]'>THIS DOCUMENT CONTAINS IMPORTANT INFORMATION REGARDING YOUR RIGHTS AND OBLIGATIONS, AS WELL AS CONDITIONS, LIMITATIONS, AND EXCLUSIONS THAT APPLY TO YOU. PLEASE READ IT CAREFULLY.</p>
             <p className='text-[16px] text-[#050123]'>BY ACCESSING OR USING THE DIGITAL PLATFORMS (AS DEFINED BELOW), YOU ACCEPT AND AGREE TO BE BOUND BY THESE TERMS OF USE (“TERMS OF USE”) (INCLUDING THE ARBITRATION AGREEMENT AND CLASS ACTION WAIVER SET FORTH HEREIN, PURSUANT TO WHICH YOU AGREE THAT DISPUTES BETWEEN YOU AND US WILL BE RESOLVED BY BINDING, INDIVIDUAL ARBITRATION (EXCEPT AS OTHERWISE PROVIDED HEREIN) AND YOU WAIVE YOUR RIGHT TO PARTICIPATE IN A CLASS ACTION LAWSUIT OR CLASS-WIDE ARBITRATION) and our Privacy Policy , AND YOU REPRESENT THAT (A) YOUR ACCESS TO AND USE OF THE DIGITAL PLATFORMS WILL BE IN ACCORDANCE WITH THESE TERMS OF USE AND ALL APPLICABLE LAWS, RULES AND REGULATIONS AND (B) YOU ARE OF LEGAL AGE TO ENTER INTO A BINDING CONTRACT. If you do not agree to these Terms of Use and the Privacy Policy , you may not access or otherwise use the Digital Platforms.</p>
@@ -31,5 +32,4 @@ const page = () => {
     </div>
   )
 }
-
 export default page
