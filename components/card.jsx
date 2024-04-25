@@ -6,7 +6,7 @@ import Image from 'next/image'
 
 const Card = () => {
   return (
-    <div>
+    <div >
       <div>
         <Image src={cardImg} alt='card img'/>
       </div>

@@ -8,21 +8,21 @@ import ProfileCard from '@/components/profile-card'
 const page = () => {
     const data = [1, 2, 3, 4, 5, 6, 7, 8, 9]
   return (
-    <div>
-       <div className='flex items-center justify-between px-[80px] py-[23px] border-b-[1px] border-[#d9d9d9]'>
+    <div className='w-full max-w-[1550px] mx-auto'>
+       <div className='flex items-center justify-between xl:px-[80px] lg:px-[50px] md:px-[30px] px-[16px] py-[23px] border-b-[1px] border-[#d9d9d9]'>
         <div className='flex items-center gap-[10px] '>
-          <span className='text-[16px] text-[#050123] font-medium'>Ana səhifə</span>
+          <span className='md:text-[16px] text-[14px] text-[#050123] font-medium'>Ana səhifə</span>
           <Image src={nextIcon} alt='next icon' />
-          <span className='text-[16px] text-[#050123] font-medium'>Xidmətlər</span>
+          <span className='md:text-[16px] text-[14px] text-[#050123] font-medium'>Xidmətlər</span>
           <Image src={nextIcon} alt='next icon' />
-          <span className='text-[16px] text-[#050123] font-medium'>Disertasiyalar</span>
+          <span className='md:text-[16px] text-[14px] text-[#050123] font-medium'>Disertasiyalar</span>
         </div>
         <Link href='/' className='flex items-center gap-[5px]'>
           <Image src={backIcon} />
-          <span className='text-[16px] font-medium text-[#050123]'>Geri</span>
+          <span className='md:text-[16px] text-[14px] font-medium text-[#050123]'>Geri</span>
         </Link>
       </div>
-      <div className='mt-[80px] mb-[120px] px-[80px] grid grid-cols-3 gap-x-[32px] gap-y-[48px]'>
+      <div className='mt-[80px] mb-[120px] xl:px-[80px] lg:px-[50px] md:px-[30px] px-[16px] grid lg:grid-cols-3 md:grid-cols-2 gap-x-[32px] gap-y-[48px]'>
         {
             data.map(item=>{
                 return <ProfileCard key={item}/>

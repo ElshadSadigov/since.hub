@@ -6,7 +6,7 @@ import Image from 'next/image'
 
 const page = () => {
     return (
-        <div className='flex flex-col items-start px-[30px] md:px-[80px] pt-[40px] md:pt-[80px] pb-[64px]'>
+        <div className='flex flex-col items-start px-[16px] md:px-[80px] pt-[40px] md:pt-[80px] pb-[64px]'>
             <div>
                 <Link href='/' className='rounded-[8px] border-[1px] border-[#374af3] border-opacity-20 px-[24px] py-[10px] flex items-center gap-[5px]'>
                     <Image src={backIcon} alt='back icon' />

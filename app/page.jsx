@@ -28,11 +28,11 @@ import { Pagination, Navigation } from 'swiper/modules';
 
 
 export default function Home() {
-  const data = [1, 2, 3, 4, 5, 6, 7, 8]
+  const data = [1, 2, 3, 4]
   return (
-    <div>
-      <div className="flex items-center justify-between h-[450px] px-[80px] pt-[80px] mb-[120px] gap-[40px]">
-        <div className="w-2/3 h-full rounded-[16px] overflow-hidden">
+    <div className='max-w-[1550px] mx-auto w-full'>
+      <div className="flex items-center justify-between h-[450px] xl:px-[80px] lg:px-[50px] md:px-[30px] px-[16px] pt-[80px] gap-[40px]">
+        <div className="md:w-2/3 w-full h-full rounded-[16px] overflow-hidden">
           <Swiper
             slidesPerView={1}
             spaceBetween={30}
@@ -45,21 +45,21 @@ export default function Home() {
             className="mySwiper h-full"
           >
             <SwiperSlide className='relative'>
-              <Image src={slide1} alt='slide img' className='w-full h-full'/>
+              <Image src={slide1} alt='slide img' className='w-full h-full' />
               <div className='absolute left-[16px] bottom-[40px]'>
                 <span className='text-[20px] font-semibold text-[#fff]'>Zeynep Kaya: Yeni Başlangıçlar</span>
                 <p className='text-[16px] text-[#fff] text-opacity-75'>İçsel Değişim ve Kişisel Gelişim Üzerine" adlı eseri, bireylerin hayatlarında yapmak istedikleri...</p>
               </div>
             </SwiperSlide>
             <SwiperSlide className='relative'>
-              <Image src={slide2} alt='slide img' className='w-full h-full '/>
+              <Image src={slide2} alt='slide img' className='w-full h-full ' />
               <div className='absolute left-[16px] bottom-[40px]'>
                 <span className='text-[20px] font-semibold text-[#fff]'>Zeynep Kaya: Yeni Başlangıçlar</span>
                 <p className='text-[16px] text-[#fff] text-opacity-75'>İçsel Değişim ve Kişisel Gelişim Üzerine" adlı eseri, bireylerin hayatlarında yapmak istedikleri...</p>
               </div>
             </SwiperSlide>
             <SwiperSlide className='relative'>
-              <Image src={slide3} alt='slide img' className='w-full h-full '/>
+              <Image src={slide3} alt='slide img' className='w-full h-full ' />
               <div className='absolute left-[16px] bottom-[40px]'>
                 <span className='text-[20px] font-semibold text-[#fff]'>Zeynep Kaya: Yeni Başlangıçlar</span>
                 <p className='text-[16px] text-[#fff] text-opacity-75'>İçsel Değişim ve Kişisel Gelişim Üzerine" adlı eseri, bireylerin hayatlarında yapmak istedikleri...</p>
@@ -67,16 +67,16 @@ export default function Home() {
             </SwiperSlide>
           </Swiper>
         </div>
-        <div className="w-1/3 h-full flex flex-col justify-between ">
+        <div className="w-1/3 h-full md:flex flex-col justify-between hidden">
           <div className='h-[45%] rounded-[8px] overflow-hidden relative'>
-            <Image src={slide2} alt='slide img' className='w-full h-[100%]'/>
+            <Image src={slide2} alt='slide img' className='w-full h-[100%]' />
             <div className='absolute left-[16px] bottom-[18px]'>
               <span className='text-[16px] font-semibold text-[#fff]'>Dini mətnlərdəki ortaq əfsanələr</span>
               <p className='text-[14px] text-[#fff] text-opacity-75'>Dini mətnlərdə bir çox ortaq hekayələr görürük...</p>
             </div>
           </div>
           <div className='h-[45%] rounded-[8px] overflow-hidden relative'>
-            <Image src={slide3} alt='slide img' className='w-full h-[100%]'/>
+            <Image src={slide3} alt='slide img' className='w-full h-[100%]' />
             <div className='absolute left-[16px] bottom-[18px]'>
               <span className='text-[16px] font-semibold text-[#fff]'>Dini mətnlərdəki ortaq əfsanələr</span>
               <p className='text-[14px] text-[#fff] text-opacity-75'>Dini mətnlərdə bir çox ortaq hekayələr görürük...</p>
@@ -84,34 +84,8 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="w-full flex items-center justify-between ps-[80px] bg-[#EEFAFA]">
-        <div className="flex flex-col items-start">
-          <span className="text-[36px] text-[#050123] font-medium">Haqqımızda</span>
-          <span className="mt-[10px] text-[#050123] text-opacity-50 text-[20px]  font-medium">3 əsas mərhələdə haqqımızda daha çox məlumat əldə edin</span>
-          <div className="mt-[50px] flex gap-[32px] bg- ">
-            <AboutCard
-              img={aboutIcon1}
-              title='Dəyərlərimiz'
-              text='İşimizi sadiqliklə, şəffaflıqla və etik normativlərlə üstün tuturuq. Müştərilərimiz və tərəfdaşlarımızla sağlam əlaqələr qurmağa önəlik veririk.'
-            />
-            <AboutCard
-              img={aboutIcon2}
-              title=' Hədəflərimiz'
-              text='Mükəmməl xidmət təklifi üçün planlı və yüksək standartlarda çalışmağı hədəfləyirik. Uzunmüddətli nailiyyət əldə etməyi hədəfləyirik.'
-            />
-            <AboutCard
-              img={aboutIcon3}
-              title='Missiyamız'
-              text='Müştərilərimizə uğur yolculuğunda tərəfdaşlıq və dəstək təmin etmək istəyirik. Layiqli xidmət missiyamızın əsasını təşkil edir.'
-            />
-          </div>
-        </div>
-        <div className="bg-gradient-to-br from-transparent via-teal-100 to-teal-300">
-          <Image src={aboutImg} alt="about img" className="w-[350px] h-full" />
-        </div>
-      </div>
-      <div className="flex gap-[24px] px-[80px] pt-[120px] pb-[150px]">
-        <div className="bg-[#374AF3] rounded-[16px] flex flex-col w-[364px] relative overflow-hidden">
+      <div className="flex md:flex-row flex-col gap-[24px] xl:px-[80px] lg:px-[50px] md:px-[30px] px-[16px] py-[120px] ">
+        <div className="bg-[#374AF3] rounded-[16px] flex flex-col md:w-[364px] w-full relative overflow-hidden min-h-[308px]">
           <span className="text-[16px] text-[#fff] mt-[40px] ms-[50px]">Bloglar və daha çoxu</span>
           <span className="text-[32px] font-semibold text-[#fff] my-[36px] ms-[20px]">#Kitablar</span>
           <li className="text-[#fff] text-opacity-75 text-[20px] rotate-[-5deg] mt-[30px] ms-[28px]">Məqalələr</li>
@@ -126,9 +100,9 @@ export default function Home() {
             </defs>
           </svg>
         </div>
-        <div className="px-[28px] bg-[#F8F8F8] rounded-[16px] py-[25px] flex flex-col items-start w-3/4">
+        <div className="px-[28px] bg-[#F8F8F8] rounded-[16px] py-[25px] flex flex-col items-start md:w-3/4 w-full">
           <span className="text-[16px] text-[#374af3] font-medium">İndi başla</span>
-          <span className="text-[28px] text-[#050123] font-medium">Paylaşmaq üçün buradasınız: Bilik İcmasına xoş gəlmisiniz!</span>
+          <span className="md:text-[28px] text-[24px] text-[#050123] font-medium">Paylaşmaq üçün buradasınız: Bilik İcmasına xoş gəlmisiniz!</span>
           <ul className="ms-[15px] mt-[20px] text-[16px] text-[#050123] text-opacity-50 list-disc flex flex-wrap gap-x-[55px] gap-y-[15px]">
             <li>Universitet məlumatları</li>
             <li>Araşdırma-tədqiqat</li>
@@ -145,44 +119,86 @@ export default function Home() {
           <Link href='/' className="px-[32px] py-[16px] mt-[50px] bg-[#374af3] rounded-[8px] text-[16px] font-bold text-[#fff]">Paylaşım et</Link>
         </div>
       </div>
-      <div className="px-[80px]">
+      <div className="w-full flex items-center justify-between xl:ps-[80px] lg:ps-[50px] md:ps-[30px] md:px-0 px-[16px] pt-[80px] md:pb-[80px] pb-[400px] bg-[#EEFAFA] relative mb-[100px]">
+        <div className="flex flex-col items-start md:w-4/5 w-full z-10">
+          <span className="md:text-[36px] text-[28px] text-[#050123] font-medium">Haqqımızda</span>
+          <span className="mt-[10px] text-[#050123] text-opacity-50 md:text-[20px] text-[16px] font-medium">3 əsas mərhələdə haqqımızda daha çox məlumat əldə edin</span>
+          <div className="mt-[50px] grid md:grid-cols-3 xl:gap-[32px] md:gap-[15px] gap-[32px]">
+            <div className='bg-[#fff] lg:px-[20px] px-[15px] lg:py-[30px] py-[20px] flex flex-col items-start rounded-lg shadow-md'>
+              <div className='p-[9px] bg-[#F3A74A] rounded'>
+                <Image src={aboutIcon1} alt='about icon' />
+              </div>
+              <span className='mt-[20px] font-medium text-[24px] '>Dəyərlərimiz</span>
+              <p className='mt-[10px] text-[16px] font-medium text-[#050123] text-opacity-50'>İşimizi sadiqliklə, şəffaflıqla və etik normativlərlə üstün tuturuq. Müştərilərimiz və tərəfdaşlarımızla sağlam əlaqələr qurmağa önəlik veririk.</p>
+            </div>
+            <div className='bg-[#fff] lg:px-[20px] px-[15px] lg:py-[30px] py-[20px] flex flex-col items-start rounded-lg shadow-md'>
+              <div className='p-[9px] rounded bg-[#F34A5A]'>
+                <Image src={aboutIcon2} alt='about icon' />
+              </div>
+              <span className='mt-[20px] font-medium text-[24px] '>Hədəflərimiz</span>
+              <p className='mt-[10px] text-[16px] font-medium text-[#050123] text-opacity-50'>Mükəmməl xidmət təklifi üçün planlı və yüksək standartlarda çalışmağı hədəfləyirik. Uzunmüddətli nailiyyət əldə etməyi hədəfləyirik.</p>
+            </div>
+            <div className='bg-[#fff] lg:px-[20px] px-[15px] lg:py-[30px] py-[20px] flex flex-col items-start rounded-lg shadow-md'>
+              <div className='p-[9px] rounded bg-[#00CD52]'>
+                <Image src={aboutIcon3} alt='about icon' />
+              </div>
+              <span className='mt-[20px] font-medium text-[24px] '>Missiyamız</span>
+              <p className='mt-[10px] text-[16px] font-medium text-[#050123] text-opacity-50'>Müştərilərimizə uğur yolculuğunda tərəfdaşlıq və dəstək təmin etmək istəyirik. Layiqli xidmət missiyamızın əsasını təşkil edir.</p>
+            </div>
+          </div>
+        </div>
+        <div className='absolute md:bottom-[50%] bottom-0 md:translate-y-[50%] md:right-0 right-[50%] md:translate-x-0 translate-x-[50%] lg:h-[500px] md:h-[420px] h-[286px] lg:w-[320px] md:w-[280px] w-[343px] md:rounded-[180px] rounded-[700px] overflow-hidden md:mb-0 mb-[20px]'>
+          <Image src={aboutImg} alt='about img' className='w-full h-full' />
+        </div>
+      </div>
+      <div className="xl:px-[80px] lg:px-[50px] md:px-[30px] px-[16px]">
         <div className="flex flex-col items-center">
           <span className="text-[24px] font-medium text-[#050123] ">Gündəmdə olan</span>
-          <span className="mt-[5px] text-[16px] text-[#050123] text-opacity-50">Gündəmdə olan ən son yazılar və mövzular üçün bizi ziyarət edin. Maraqlı məqalə və kitabları kəşf edin!</span>
+          <span className="mt-[5px] text-[16px] text-[#050123] text-opacity-50 md:text-start text-center">Gündəmdə olan ən son yazılar və mövzular üçün bizi ziyarət edin. Maraqlı məqalə və kitabları kəşf edin!</span>
         </div>
-        <div className="grid grid-cols-3 gap-[32px] mt-[30px]">
-          <div className="relative h-[250px] rounded-[8px] overflow-hidden">
-            <div className="w-full h-full absolute left-0 top-0  bg-[#050123] bg-opacity-50 flex items-center justify-center">
-              <span className="px-[56px] py-[15px] rounded-[8px] bg-[#fff] bg-opacity-25 text-[30px] font-medium text-[#fff]">Bloqlar</span>
+        <div className='overflow-x-auto'>
+          <div className="grid grid-cols-4 gap-[32px] mt-[30px] md:min-w-[1700px] min-w-[1100px]">
+            <div className="relative md:h-[250px] h-[155px] rounded-[8px] overflow-hidden">
+              <div className="w-full h-full absolute left-0 top-0  bg-[#050123] bg-opacity-50 flex items-center justify-center">
+                <span className="md:px-[56px] px-[26px] py-[15px] rounded-[8px] bg-[#fff] bg-opacity-25 md:text-[30px] text-[22px] font-medium text-[#fff]">Bloqlar</span>
+              </div>
+              <Image src={bloqsImg} alt="bloq img" className=" w-full h-full" />
             </div>
-            <Image src={bloqsImg} alt="bloq img" className=" w-full h-full" />
-          </div>
-          <div className="relative h-[250px] rounded-[8px] overflow-hidden">
-            <div className="w-full h-full absolute left-0 top-0  bg-[#050123] bg-opacity-50 flex items-center justify-center">
-              <span className="px-[56px] py-[15px] rounded-[8px] bg-[#fff] bg-opacity-25 text-[30px] font-medium text-[#fff]">Məqalələr</span>
+            <div className="relative md:h-[250px] h-[155px] rounded-[8px] overflow-hidden">
+              <div className="w-full h-full absolute left-0 top-0  bg-[#050123] bg-opacity-50 flex items-center justify-center">
+                <span className="md:px-[56px] px-[26px] py-[15px] rounded-[8px] bg-[#fff] bg-opacity-25 md:text-[30px] text-[22px] font-medium text-[#fff]">Məqalələr</span>
+              </div>
+              <Image src={maqasImg} alt="bloq img" className=" w-full h-full" />
             </div>
-            <Image src={maqasImg} alt="bloq img" className=" w-full h-full" />
-          </div>
-          <div className="relative h-[250px] rounded-[8px] overflow-hidden">
-            <div className="w-full h-full absolute left-0 top-0  bg-[#050123] bg-opacity-50 flex items-center justify-center">
-              <span className="px-[56px] py-[15px] rounded-[8px] bg-[#fff] bg-opacity-25 text-[30px] font-medium text-[#fff]">Kitablar</span>
+            <div className="relative md:h-[250px] h-[155px] rounded-[8px] overflow-hidden">
+              <div className="w-full h-full absolute left-0 top-0  bg-[#050123] bg-opacity-50 flex items-center justify-center">
+                <span className="md:px-[56px] px-[26px] py-[15px] rounded-[8px] bg-[#fff] bg-opacity-25 md:text-[30px] text-[22px] font-medium text-[#fff]">Kitablar</span>
+              </div>
+              <Image src={booksImg} alt="bloq img" className=" w-full h-full" />
             </div>
-            <Image src={booksImg} alt="bloq img" className=" w-full h-full" />
+            <div className="relative md:h-[250px] h-[155px] rounded-[8px] overflow-hidden">
+              <div className="w-full h-full absolute left-0 top-0  bg-[#050123] bg-opacity-50 flex items-center justify-center">
+                <span className="md:px-[56px] px-[26px] py-[15px] rounded-[8px] bg-[#fff] bg-opacity-25 md:text-[30px] text-[22px] font-medium text-[#fff]">Disertasiyalar</span>
+              </div>
+              <Image src={bloqsImg} alt="bloq img" className=" w-full h-full" />
+            </div>
           </div>
         </div>
       </div>
-      <div className="mt-[150px] px-[80px] bg-[#F9F9F9] py-[80px] flex flex-col gap-[100px]">
+      <div className="mt-[150px] xl:px-[80px] lg:px-[50px] md:px-[30px] px-[16px] bg-[#F9F9F9] py-[80px] flex flex-col gap-[100px]">
         <div>
           <div className="flex justify-between">
             <span className="text-[24px] text-[#050123] font-medium">Məqalələr</span>
             <Link href='/' className="text-[18px] font-medium text-[#374af3]">daha çox</Link>
           </div>
-          <div className="mt-[16px] grid grid-cols-4 gap-x-[32px] gap-y-[48px]">
-            {
-              data.map(item => {
-                return <Card key={item} />
-              })
-            }
+          <div className='overflow-x-auto'>
+            <div className="mt-[16px] grid grid-cols-4 gap-x-[32px] gap-y-[48px] min-w-[1300px]">
+              {
+                data.map(item => {
+                  return <Card key={item} />
+                })
+              }
+            </div>
           </div>
         </div>
         <div>
@@ -190,12 +206,14 @@ export default function Home() {
             <span className="text-[24px] text-[#050123] font-medium">Bloglar</span>
             <Link href='/' className="text-[18px] font-medium text-[#374af3]">daha çox</Link>
           </div>
-          <div className="mt-[16px] grid grid-cols-4 gap-x-[32px] gap-y-[48px]">
-            {
-              data.map(item => {
-                return <Card key={item} />
-              })
-            }
+          <div className='overflow-x-auto'>
+            <div className="mt-[16px] grid grid-cols-4 gap-x-[32px] gap-y-[48px] min-w-[1300px]">
+              {
+                data.map(item=>{
+                  return <Card key={item}/>
+                })
+              }
+            </div>
           </div>
         </div>
         <div>
@@ -203,17 +221,16 @@ export default function Home() {
             <span className="text-[24px] text-[#050123] font-medium">Kitablar</span>
             <Link href='/' className="text-[18px] font-medium text-[#374af3]">daha çox</Link>
           </div>
-          <div className="mt-[16px] grid grid-cols-4 gap-x-[32px] gap-y-[48px]">
-            {
-              data.map(item => {
-                return <Card key={item} />
-              })
-            }
+          <div className='overflow-x-auto'>
+            <div className="mt-[16px] grid grid-cols-4 gap-x-[32px] gap-y-[48px] min-w-[1300px]">
+              {
+                data.map(item=>{
+                  return <Card key={item}/>
+                })
+              }
+            </div>
           </div>
         </div>
-      </div>
-      <div className="px-[80px] py-[150px]">
-        s
       </div>
     </div>
   );

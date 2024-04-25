@@ -8,7 +8,7 @@ import Link from 'next/link'
 
 const ProfileCard = () => {
   return (
-    <div className='rounded-[24px] overflow-hidden shadow-md'>
+    <div className='rounded-[24px] overflow-hidden shadow-md max-w-[405px] mx-auto'>
         <div className='relative h-[220px]'>
             <Image src={profileCardImg} alt='profile card img' className='w-full h-full'/>
             <div className='absolute left-0 top-[20px] w-full px-[23px]  flex justify-between items-center'>
