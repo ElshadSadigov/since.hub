@@ -14,21 +14,21 @@ import ProfileCard from '@/components/profile-card'
 const page = () => {
     const datas = [1, 2, 3, 4]
   return (
-    <div>      
-        <div className='flex items-center justify-between px-[20px] md:px-[80px] py-[23px] pb-[10px] md:pb-[0px] border-b-[1px] border-[#d9d9d9] '>
-            <div className='flex items-center gap-[10px] '>
-                <span className='text-[16px] text-[#050123] font-medium'>Ana səhifə</span>
+    <div className='w-full max-w-[1550px] mx-auto'>      
+        <div className='flex items-center justify-between px-[16px] xl:px-[80px] lg:px-[50px] md:px-[30px] py-[23px] border-b-[1px] border-[#d9d9d9] '>
+            <div className='flex items-center md:gap-[10px] gap-[5px]'>
+                <span className='md:text-[16px] text-[14px] text-[#050123] font-medium'>Ana səhifə</span>
                 <Image src={nextIcon} alt='next icon' />
-                <span className='text-[16px] text-[#050123] font-medium'>Xidmətlər</span>
+                <span className='md:text-[16px] text-[14px] text-[#050123] font-medium'>Xidmətlər</span>
                 <Image src={nextIcon} alt='next icon' />
-                <span className='text-[16px] text-[#050123] font-medium'>Məqalələr</span>
+                <span className='md:text-[16px] text-[14px] text-[#050123] font-medium'>Məqalələr</span>
             </div>
             <Link href='/' className='flex items-center gap-[5px]'>
                 <Image src={backIcon} />
                 <span className='text-[16px] font-medium text-[#050123]'>Geri</span>
             </Link>
         </div>
-        <div className='md:px-[80px] md:flex  md:flex-row flex flex-col mt-[40px] md:mt-[80px]'>
+        <div className='xl:px-[80px] lg:px-[50px] md:px-[30px] px-[16px] md:flex  md:flex-row flex flex-col mt-[40px] md:mt-[80px]'>
             <div className='px-[30px] md:w-3/5 md:px-[10px] md:order-first mt-[40px] md:mt-[0px]'>
                 <span className='text-[#374AF3]'>İzləmədə qalın</span>
                 <p className='font-semibold text-[24px] md:text-[32px] text-[#050123] mt-[5px]'>Niyə İş tapa bilməyən bu qədər çox proqramçı var?</p>
@@ -37,8 +37,8 @@ const page = () => {
                <p className='mt-[20px] text-[14px] md:text-[16px]'>Təəssüf ki, “ proqramlaşdırmanı bilmək ” kifayət deyil, çünki… </p>
             </div>
             <div className='md:w-2/5 px-[30px] order-first '>
-                <div className='flex'>
-                    <div className='w-1/6  flex justify-center items-center'>
+                <div className='flex gap-[10px]'>
+                    <div className='w-1/6 flex justify-center items-center'>
                         <Image src={meryJan}/>
                     </div>     
                     <div className='flex flex-col justify-center'>
@@ -65,7 +65,7 @@ const page = () => {
                 <hr className='border-t-1 border-gray-400 mt-[26px]'/>
             </div>
         </div>
-        <div className=' mt-[30px] md:mt-[0px] px-[22px] md:px-[80px] md:flex  md:flex-row flex flex-col'>
+        <div className=' mt-[30px] md:mt-[10px] xl:px-[80px] lg:px-[50px] md:px-[30px] px-[16px] md:flex  md:flex-row flex flex-col'>
             <div className='md:w-3/5 px-[10px]'>
                 <Image src={readingImg1} alt='ada' />           
                 <p className='mt-[40px] font-medium'>Hər kəs kodlaya bilər</p>

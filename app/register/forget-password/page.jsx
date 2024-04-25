@@ -5,7 +5,7 @@ import backIcon from '../../../public/svgs/back-icon.svg'
 
 const page = () => {
     return (
-        <div className='px-[30px] md:px-[80px] py-[40px] md:py-[80px] flex flex-col items-start'>
+        <div className='px-[16px] md:px-[80px] py-[40px] md:py-[80px] flex flex-col items-start'>
             <div>
                 <Link href='/' className='rounded-[8px] border-[1px] border-[#374af3] border-opacity-20 px-[24px] py-[10px] flex items-center gap-[5px]'>
                     <Image src={backIcon} alt='back icon' />
